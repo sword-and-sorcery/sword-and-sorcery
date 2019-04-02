@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sword and Sorcery'
-copyright = '2019, Conan.io'
+copyright = '2019, JFrog LTD'
 author = 'Conan.io'
 
 # The short X.Y version
