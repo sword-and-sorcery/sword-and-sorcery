@@ -1,11 +1,14 @@
 Getting started
 ===============
 
+Developing the sources
+++++++++++++++++++++++
+
 Use a workspace:
 
 -  Clone all the projects in the Github organization `sword-and-sorcery`_
 
-  .. code-block:: bash
+   .. code-block:: bash
 
       git clone git@github.com:sword-and-sorcery/sword-and-sorcery.git
       git clone git@github.com:sword-and-sorcery/conanquest-fantastic-adventures.git
@@ -18,7 +21,6 @@ Use a workspace:
       git clone git@github.com:sword-and-sorcery/ui-tileset.git
 
 
-    
 -  The project files are at `conanquest-fantastic-adventures`_.
    There is a hardcoded path at the `conanquest-fantastic-adventures/_workspace/layout_cmake` file,
    change it to the basepath of your workspace. Modify the paths to the
@@ -35,6 +37,29 @@ Use a workspace:
   `conan workspace install ..`
 
 
+Running the project
++++++++++++++++++++
+
+To run the generated executable (from package `ui-board-imgui-glfw-opengl3`) you need a configuration file and
+the assets for the game. There is a convenient `conanfile.py` to gather all the needed stuff inside the
+main repository: `conanquest-fantastic-adventures/ui-board-imgui-glfw-opengl3`_. Follow these steps:
+
+.. code-block:: bash
+
+   cd conanquest-fantastic-adventures/ui-board-imgui-glfw-opengl3
+   mkdir build && cd build
+   conan install ..
+   conan source .. 
+   conan build .. -sf .
+
+This set of commands gathers the required binaries in `bin` folder and the assets for all the episodes in 
+the `data` directory. Now you can execute any scenario available:
+
+.. code-block:: bash
+
+   ./bin/board_imgui --config ./data/the-labyrinth.xml
+
 
 .. _`sword-and-sorcery`: https://github.com/sword-and-sorcery
 .. _`conanquest-fantastic-adventures`: https://github.com/sword-and-sorcery/conanquest-fantastic-adventures/tree/master/_workspace
+.. _`conanquest-fantastic-adventures/ui-board-imgui-glfw-opengl3`: https://github.com/sword-and-sorcery/conanquest-fantastic-adventures/tree/master/ui-board-imgui-glfw-opengl3
