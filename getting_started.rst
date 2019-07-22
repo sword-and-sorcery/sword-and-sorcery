@@ -20,6 +20,11 @@ Use a workspace:
       git clone git@github.com:sword-and-sorcery/assets-dungeon.git
       git clone git@github.com:sword-and-sorcery/ui-tileset.git
 
+-  It might be useful to use the `mu-repo` tool to pull all the repos at the same time and so on:
+
+    `pip install mu-repo`
+    `mu register --all`
+    `mu pull`
 
 -  The project files are at `conanquest-fantastic-adventures`_.
    There is a hardcoded path at the `conanquest-fantastic-adventures/_workspace/layout_cmake` file,
