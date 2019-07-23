@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Sword and Sorcery's documentation!
-=============================================
+Sword and Sorcery
+=================
 
 This is a C++ project with the aim of testing Conan features. It eventually
 will also be a playable board game.
@@ -13,7 +13,9 @@ will also be a playable board game.
    :maxdepth: 2
    :caption: Contents:
 
-   getting_started
+   repositories/index
+   building/index
+   utils/index
 
 
 Indices and tables

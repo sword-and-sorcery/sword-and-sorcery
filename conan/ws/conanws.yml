@@ -1,0 +1,16 @@
+editables:
+    core-messages/0.0@sword/sorcery:
+        path: ../../../core-messages
+    core-communications/0.0@sword/sorcery:
+        path: ../../../core-communications
+    ui-tileset/0.0@sword/sorcery:
+        path: ../../../ui-tileset
+    ui-tileset-glfw/0.0@sword/sorcery:
+        path: ../../../ui-tileset-glfw
+    ui-board_game/0.0@sword/sorcery:
+        path: ../../../ui-board_game
+    ui-board-imgui/0.0@sword/sorcery:
+        path: ../../../ui-board-imgui/
+layout: layout_cmake
+workspace_generator: cmake
+root: ui-board-imgui/0.0@sword/sorcery
