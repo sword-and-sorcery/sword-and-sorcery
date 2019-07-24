@@ -1,6 +1,9 @@
 Sword and sorcery
 =================
 
+> ⚠️ **Full docs**: https://sword-and-sorcery.github.io/sword-and-sorcery/
+
+
 This repository gathers common information for the projects inside the 
 [sword-and-sorcery](https://github.com/sword-and-sorcery) organization.
 The objective of all these repos is to build a game engine (board game)
