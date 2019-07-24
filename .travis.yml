@@ -1,0 +1,11 @@
+language: python
+python:
+- 3.7
+install:
+- pip install sphinx sphinx_rtd_theme
+script: make html
+after_success:
+- "./push.sh"
+env:
+  global:
+  - secure: naaeMntYDzFpDHsTUAyZPEVA+7QPmjFe2DYOt5vH+3gdmkvzNPq13Eh331Rw0E+PUK4Nbi0p3B6dME819tJ/l0/aXqcQTE63H+3KqvoqOOGLk9EsuSQadyQ/rBoZ29JKKdamBpJ6p2/7LRMG2i3zuyF4196j16/kC6YscZFjawWW+D1acLHz3pcGxEqMv+uPU9R4yvLCMGQgVPDDXykCnV8O6xjhopzeL2mU9nA3oQwrdN9amKmZh26zIyFBjaldd39ApXeLGWnclTN2Cc4X8q5TOoe9TgJ1TeHfyt1Ch7cwrpmcv/XFziRF6czJUWENzREexM+5XgCszrD//uUP9K35574zI2ac2mhZu0gHNHHwhfHYfZ2C2IMcHkwGjrSF4tZ+e9ifwmnEnctHnrZMx4PRgz5SeIIS9D8hyBbMwWRKM9jR8TYEvNE8mWvJZoc6vHAG0ZivqFAJ2hTooOyXE0ncfcyIQCxNkrX4r0vh3KI1/OYjRggQbik/HIx/UBQvvqKBKsLF3v1X9a6e4k8rY9n7Ktt6ItUomIURKzfDdngeII7qdUVflgumsvCJJcy4unzdYgUCjzLzazh7DV3pAOdeGZ0BpiDE3KgkOW9nuVT94n+WcyJ0v2fEm8nKY/3lLypA0VbBS9NpDIKiCy4g9ylG0qP+vdgQ2BHBHxGZg0A=
