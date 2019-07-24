@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Building the project &#8212; Sword and Sorcery  documentation</title>
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Regular build" href="regular.html" />
+    <link rel="prev" title="Repositories" href="../repositories/index.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="regular.html" title="Regular build"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../repositories/index.html" title="Repositories"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sword and Sorcery  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="building-the-project">
+<h1>Building the project<a class="headerlink" href="#building-the-project" title="Permalink to this headline">¶</a></h1>
+<p>As the aim of this project is to eat our own food, we highly recommend you
+to use whatever you are used to for a Conan project having multiple packages,
+and report feedback or errors if you find any issue.</p>
+<p>Said that, you can find in the several sections <em>step by step</em> documentation
+on how to build the project from sources. Before running into any of them
+you may need to add the following remote to find <cite>grpc</cite> (Google Protocol Buffers)
+package as it is not yet in <cite>conan-center</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conan remote add inexorgame https://api.bintray.com/conan/inexorgame/inexor-conan
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Build the full project:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="regular.html">Regular build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workspace.html">Workspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workspace.html#released-implementation">Released implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace.html#poc-5314">POC #5314</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/conan-ui-dep-graph.png"><img alt="Dependency graph for UI application" src="../_images/conan-ui-dep-graph.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Dependency graph for UI application</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../repositories/index.html"
+                        title="previous chapter">Repositories</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="regular.html"
+                        title="next chapter">Regular build</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/building/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="regular.html" title="Regular build"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../repositories/index.html" title="Repositories"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sword and Sorcery  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, JFrog LTD.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>

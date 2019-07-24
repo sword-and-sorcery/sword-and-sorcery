@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Workspace &#8212; Sword and Sorcery  documentation</title>
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utils" href="../utils/index.html" />
+    <link rel="prev" title="Regular build" href="regular.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../utils/index.html" title="Utils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="regular.html" title="Regular build"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sword and Sorcery  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Building the project</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="workspace">
+<h1>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h1>
+<p>Workspace is a really powerful feature of Conan to build a single project for your IDE
+from different packages. <a class="reference external" href="https://docs.conan.io/en/latest/developing_packages/workspaces.html">Find docs here</a>.</p>
+<p>Workspaces work for packages with a <cite>CMakeLists.txt</cite> file, they are nice for
+<strong>developing several packages at the same time</strong>, but you will need to create the
+packages in the ‘conanquest-fantastic-adventures’ repository yourself as they are
+not C++ packages. Check the <a class="reference internal" href="regular.html#building-regular-build"><span class="std std-ref">Regular build</span></a> section if you need advice
+on how to build it.</p>
+<div class="section" id="released-implementation">
+<h2>Released implementation<a class="headerlink" href="#released-implementation" title="Permalink to this headline">¶</a></h2>
+<p>WIP. Need to try and document (use and modify files in folder ‘conan/ws’).</p>
+</div>
+<div class="section" id="poc-5314">
+<h2>POC #5314<a class="headerlink" href="#poc-5314" title="Permalink to this headline">¶</a></h2>
+<p>There is an alternate implementation of workspaces trying to deal with some issues
+related to current implementation. In order to use this implementation (just a POC),
+you will need to use the <a class="reference external" href="https://github.com/conan-io/conan/pull/5314">developing version of Conan for this PR</a>.</p>
+<ol class="arabic">
+<li><p>Clone all the repositories into the same folder as you would do for a regular
+build (see previous section).</p></li>
+<li><p>Create an empty folder to store the build files for the project</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;path-to-buildir&gt; <span class="o">&amp;&amp;</span> <span class="nb">cd</span> &lt;path-to-buildir&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Create the workspace (use the settings you want).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conan workspace install &lt;path-to-repos&gt;/sword-and-sorcery/sword-and-sorcery/conan/ws5314/conan_ws.yml <span class="o">[</span>-s <span class="nv">build_type</span><span class="o">=</span>Debug ...<span class="o">]</span>
+</pre></div>
+</div>
+<p>In the previous command we are using a file provided within the repository that adds all
+the packages of the project to the workspace, you can use this file as a starting point
+to generate the workspace that fits your needs.</p>
+</li>
+<li><p>Open this folder (previous command created a root <cite>CMakeLists.txt</cite>) using your
+favorite IDE with CMake support</p></li>
+<li><p>Build!</p></li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Workspace</a><ul>
+<li><a class="reference internal" href="#released-implementation">Released implementation</a></li>
+<li><a class="reference internal" href="#poc-5314">POC #5314</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="regular.html"
+                        title="previous chapter">Regular build</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../utils/index.html"
+                        title="next chapter">Utils</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/building/workspace.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../utils/index.html" title="Utils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="regular.html" title="Regular build"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sword and Sorcery  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Building the project</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, JFrog LTD.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
