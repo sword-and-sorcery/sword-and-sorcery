@@ -15,8 +15,7 @@ on how to build it.
 Released implementation
 +++++++++++++++++++++++
 
-Some previous efforts on directory 'conan/ws' in this repository although not
-a working solution here yet.
+WIP. Need to try and document (use and modify files in folder 'conan/ws').
 
 
 POC #5314
